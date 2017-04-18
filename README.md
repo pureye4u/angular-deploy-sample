@@ -26,3 +26,12 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Using docker deploy
+npm run build
+
+docker stop web
+docker rm web
+docker build -t my-sample-app .
+docker run --name web -p 80:80 -dit my-sample-app
